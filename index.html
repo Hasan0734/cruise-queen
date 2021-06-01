@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <section class="main-body">
     <!--Header and Menu Section-->
     <header class="container">
         <nav>
@@ -58,17 +59,17 @@
             <div class="input-group f-class">
                 <div>
                     <label for=" ">First Class ($150)</label>
-                    <input id="first-ticket" class="inp-style inp-width" type="number " name=" " value="0">
+                    <input id="firstClass-count" class="inp-style inp-width" type="number " name=" " value="0">
                 </div>
                 <div class="plus-minus-btn">
-                    <button onclick="handleTicket('first',true)" id="frist-increase">+</button> <button onclick="handleTicket('first', false)" id="first-decrease">-</button> 
+                    <button onclick="handleTicket('firstClass',true)" id="frist-increase">+</button> <button onclick="handleTicket('firstClass', false)" id="first-decrease">-</button> 
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
                     <label for=" ">Economy ($100)</label>
-                    <input id="economy-ticket" class="inp-style inp-width " type="number " name=" " value="0">
+                    <input id="economy-count" class="inp-style inp-width " type="number " name=" " value="0">
                 </div>
                 <div class="plus-minus-btn ">
                    <button onclick="handleTicket('economy',true)" id="economy-increase">+</button> <button onclick="handleTicket('economy',false)" id="economy-decrease">-</button> 
@@ -102,10 +103,21 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style">Book Now</button>
+            <button onclick="bookingNow()" class="btn-style">Book Now</button>
         </div>
     </main>
+</section>
+    <div id="booking-success">
 
+        <div class="circle">
+            <i class="fas fa-check"></i>
+        </div>
+        <div class="success-text">
+            <h1>Success</h1>
+            <p>Check your email for a booking confirmation. We'll see you soon.</p>
+            <button onclick="completeBtn()">OK</button>
+        </div>
+    </div>
     <!--Thank You-->
 <script src="app.js"></script>
 </body>
